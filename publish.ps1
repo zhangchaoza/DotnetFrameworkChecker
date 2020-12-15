@@ -8,7 +8,7 @@ if ($installationPath -and (test-path "$installationPath\Common7\Tools\vsdevcmd.
 
 $commands = {
     msbuild.exe -t:restore
-    msbuild.exe -t:build
+    msbuild.exe -t:build -p:Configuration=release
 }
 $encodedCommand = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($commands))
 $pwsh = "pwsh.exe"
