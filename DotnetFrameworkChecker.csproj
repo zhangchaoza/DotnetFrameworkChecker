@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net5.0-windows;net35</TargetFrameworks>
+    <TargetFrameworks>net5.0-windows;net35;net40</TargetFrameworks>
     <LangVersion>9.0</LangVersion>
   </PropertyGroup>
 
