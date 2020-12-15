@@ -11,7 +11,8 @@ namespace DotnetFrameworkChecker
         {
             const string subkey = @"SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\";
 
-            using (var ndpKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey(subkey))
+            using (var ndpKey = Registry.LocalMachine.OpenSubKey(subkey))
+            // using (var ndpKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey(subkey))
             {
                 if (ndpKey != null && ndpKey.GetValue("Release") != null)
                 {
@@ -54,10 +55,10 @@ namespace DotnetFrameworkChecker
 
         internal static void GetVersionFromRegistry()
         {
+            var subkey = @"SOFTWARE\Microsoft\NET Framework Setup\NDP\";
             // Opens the registry key for the .NET Framework entry.
-            using (RegistryKey ndpKey =
-                    RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).
-                    OpenSubKey(@"SOFTWARE\Microsoft\NET Framework Setup\NDP\"))
+            using (var ndpKey = Registry.LocalMachine.OpenSubKey(subkey))
+            // using (RegistryKey ndpKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey(subkey))
             {
                 foreach (var versionKeyName in ndpKey.GetSubKeyNames())
                 {
