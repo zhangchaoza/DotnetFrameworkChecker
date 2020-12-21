@@ -1,10 +1,16 @@
 [package]
-name = "dotnet_framework_checker"
+name = "dotnetfxver"
 version = "0.1.0"
 authors = ["zhangchao <zackability@hotmail.com>"]
 edition = "2018"
+keywords = ["dotnet"]
+categories = ["command-line-utilities"]
+homepage = "https://github.com/sharkdp/hexyl"
+license = "MIT"
+description = "A .NET Framework version checker writen in Rust"
+readme = "README.md"
+repository = "https://github.com/zhangchaoza/DotnetFrameworkChecker"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 winreg = { version = "0.8.0", features = ["transactions"] }
