@@ -1,11 +1,11 @@
 [package]
 name = "dotnetfxver"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["zhangchao <zackability@hotmail.com>"]
 edition = "2018"
 keywords = ["dotnet"]
 categories = ["command-line-utilities"]
-homepage = "https://github.com/sharkdp/hexyl"
+homepage = "https://github.com/zhangchaoza/DotnetFrameworkChecker"
 license = "MIT"
 description = "A .NET Framework version checker writen in Rust"
 readme = "README.md"
