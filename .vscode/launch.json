@@ -7,15 +7,15 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug executable 'dotnet_framework_checker'",
+      "name": "Debug executable 'dotnetfxver'",
       "cargo": {
         "args": [
           "build",
-          "--bin=dotnet_framework_checker",
-          "--package=dotnet_framework_checker"
+          "--bin=dotnetfxver",
+          "--package=dotnetfxver"
         ],
         "filter": {
-          "name": "dotnet_framework_checker",
+          "name": "dotnetfxver",
           "kind": "bin"
         }
       },
@@ -25,16 +25,16 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug unit tests in executable 'dotnet_framework_checker'",
+      "name": "Debug unit tests in executable 'dotnetfxver'",
       "cargo": {
         "args": [
           "test",
           "--no-run",
-          "--bin=dotnet_framework_checker",
-          "--package=dotnet_framework_checker"
+          "--bin=dotnetfxver",
+          "--package=dotnetfxver"
         ],
         "filter": {
-          "name": "dotnet_framework_checker",
+          "name": "dotnetfxver",
           "kind": "bin"
         }
       },
